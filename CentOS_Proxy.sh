@@ -25,7 +25,8 @@ mor='\e[0;35m'
 yukle_3proxy() {
     echo -e "\n\n\t$yesil 3Proxy Yükleniyor..\n$renkreset\n"
     # URL="https://github.com/z3APA3A/3proxy/archive/3proxy-0.8.6.tar.gz"
-    URL="https://github.com/mehmetarslann/CentOS_Proxy/raw/main/Paketler/3proxy-0.9.4.tar.gz"
+    # https://github.com/mehmetarslann/CentOS_Proxy/raw/main/Paketler/3proxy-0.9.4.tar.gz
+    URL="https://github.com/z3APA3A/3proxy/archive/3proxy-0.8.6.tar.gz"
     wget -qO- $URL | bsdtar -xvf-       # -xf-
     cd 3proxy-3proxy-0.9.4
     make -f Makefile.Linux              # -sif
@@ -120,9 +121,10 @@ $(awk -F "/" '{print $3 ":" $4 ":" $1 ":" $2 }' ${VERI})
 EOF
 }
 
+# https://github.com/mehmetarslann/CentOS_Proxy/raw/main/Paketler/jq-linux64
 jq_yukle() {
     # wget -O jq https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
-    wget -qO jq https://github.com/mehmetarslann/CentOS_Proxy/raw/main/Paketler/jq-linux64
+    wget -qO jq https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
     chmod +x ./jq
     mv jq /usr/bin
 }
